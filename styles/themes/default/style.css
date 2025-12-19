@@ -1,0 +1,369 @@
+:root {
+    --accent: #87914c;
+    --accent2: #28151F;
+    --accent-text: #28151F;
+    --background: #faebd2;
+    --background-text: #000;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0px;
+    background: var(--accent2);
+    color: var(--background-text);
+    font-size: 1.4rem;
+}
+
+header {
+    background-color: var(--background);
+    padding: 20px;
+}
+
+#logo {
+    display: block;
+    margin: 40px auto 0 auto;
+    width: 220px;
+}
+
+h1 {
+    font-family: "Birthstone", cursive;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    color: var(--accent);
+    margin: 0;
+    font-size: 4.5rem;
+}
+
+h2 {
+    text-align: left;
+    font-size: 1.4rem;
+    color: var(--accent2);
+    margin: 30px 0 15px 0;
+}
+
+.wrapper {
+    padding: 0 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#content {
+    padding: 10px 0 30px 0;
+    text-align: center;
+    background-color: var(--background);
+}
+
+p {
+    margin: 10px 0;
+}
+
+#check-back {
+    margin: 80px 0;
+}
+
+.button, .tingle-btn--primary {
+    background: var(--accent);
+    color: var(--accent-text);
+    border-radius: 5px;
+    padding: 10px !important;
+    margin: 10px 0;
+    width: 100%;
+    border: none;
+}
+
+#submit-button, #selfie-button {
+    margin-top: 25px;
+    padding: 20px 10px !important;
+}
+
+.success {
+    border: 2px solid #c3e6cb;
+    padding: 10px;
+    text-align: center;
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.success a {
+    text-decoration: none;
+    color: #155724;
+}
+
+.error {
+    border: 2px solid #f5c6cb;
+    border-radius: 3px;
+    text-align: center;
+    padding: 10px;
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.notice {
+    border: 2px solid #ffeeba;
+    border-radius: 3px;
+    text-align: center;
+    padding: 10px;
+    background-color: #fff3cd !important;
+    color: #856404;
+}
+
+.form-line {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+/* Labels */
+.form-line label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+    font-size: 1rem;
+}
+
+.form-line label.button {
+    display: inline-block;
+    font-weight: normal;
+    color: var(--accent2);
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+/* Inputs */
+.form-line input {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Input focus */
+.form-line input:focus {
+    border-color: var(--accent);
+    outline: none;
+}
+
+/* Optional: smooth overall form appearance */
+.form-line input::placeholder {
+    color: #aaa;
+}
+
+.button.loading {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+#selfie-preview-container {
+    position: relative;
+    display: inline-block;
+}
+
+#selfie-preview {
+    display: block;
+    margin: 20px auto;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Make tingle modal fullscreen */
+.tingle-modal.selfie-modal {
+    padding: 0 !important;
+}
+
+.tingle-modal.selfie-modal .tingle-modal-box {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    margin: 0 !important;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.tingle-modal.selfie-modal .tingle-modal-box__content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    overflow: auto;
+}
+
+/* Circular mask for the cropper overlay */
+.cropper-view-box,
+.cropper-face {
+    border-radius: 50% !important;
+}
+
+/* Footer button fixed at bottom */
+.cropper-footer {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background: #fff;
+    /* optional: match modal bg */
+    text-align: center;
+    z-index: 1000;
+}
+
+/* Cropper image responsive */
+.tingle-modal.selfie-modal img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+.runner, .volunteer {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin: 0 0px 10px 0px;
+    background: rgba(255, 255, 255, 0.3);
+    border: 1px solid #e7e2ce;
+}
+
+.runner .position {
+    font-weight: bold;
+    font-size: 1.8rem;
+    width: 45px;
+    text-align: center;
+    margin-right: 10px;
+    color: #222;
+    padding-top: 0.3rem;
+}
+
+.runner .position em {
+    font-size: 0.8rem;
+    vertical-align: super;
+    font-style: normal;
+}
+
+.runner .selfie, .volunteer .selfie {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 2px solid transparent;
+}
+
+.runner .info, .volunteer .info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+
+.runner .name, .volunteer .name {
+    font-weight: bold;
+    color: var(--accent2);
+    font-size: 1rem;
+}
+
+.volunteer .name {
+    margin-top: 5px;
+}
+
+.runner .time {
+    font-size: 0.85rem;
+    color: var(--accent2);
+}
+
+
+.runner-unknown .name, .runner-unknown .time {
+    opacity: 0.3;
+}
+
+.me-1 {
+    background: var(--accent2);
+    color: var(--accent);
+    border-color: var(--accent2);
+}
+
+.me-1 .name, .me-1 .time, .me-1 .position {
+    color: var(--accent);
+}
+
+.me-1 .selfie {
+    border-color: var(--accent);
+}
+
+.bride-1 {
+    background: linear-gradient(135deg, #b8860b, #daa520);
+    color: #f5f5f5;
+    border-color: #8b7500;
+}
+
+.bride-1 .selfie {
+    border-color: #c7ab0e;
+}
+
+.bride-1 .name, .bride-1 .time, .bride-1 .position {
+    color: #f5f5f5;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7),
+        -1px -1px 2px rgba(255, 255, 255, 0.2);
+}
+
+.groom-1 {
+    background: linear-gradient(135deg, #b8860b, #daa520);
+    color: #f5f5f5;
+    border-color: #8b7500;
+}
+
+.groom-1 .selfie {
+    border-color: #c7ab0e;
+}
+
+.groom-1 .name, .groom-1 .time, .groom-1 .position {
+    color: #f5f5f5;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7),
+        -1px -1px 2px rgba(255, 255, 255, 0.2);
+}
+
+footer {
+    background-color: var(--accent2);
+    color: #fff;
+    padding: 10px 0;
+    font-size: 0.9rem;
+}
+
+footer h3 {
+    font-size: 1.4rem;
+    line-height: 1.2;
+}
+
+footer ul {
+    list-style: none;
+    margin: 20px 0;
+    padding: 0;
+}
+
+footer ul li {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+footer ul li em {
+    font-weight: normal;
+    font-style: normal;
+}
+
+footer #updated {
+    font-size: 0.8rem;
+    color: #6d4a64;
+    margin: 20px 0;
+}
